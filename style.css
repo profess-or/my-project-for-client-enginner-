@@ -1,0 +1,460 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+.header {
+    background-color: rgb(199, 248, 248);
+    height: 30vh;
+}
+
+.header1 {
+    height: 50%;
+    padding: 1rem;
+    font-size: 1.4rem;
+    background-color: #262626;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header1 i {
+    color: white;
+    font-size: 1.8rem;
+}
+
+.email-section-header1, .number-section-header1 {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.header2 {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.3); /* Adjust opacity for better visibility */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Optional: Adds subtle separation */
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0rem auto;
+    
+    padding: 1.3rem 2rem;
+    box-shadow: 0 2px 0.4rem rgba(0, 0, 0, 0.1);
+    width: 55%;
+}
+
+.header2 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.header2 ul li {
+    margin-right: 2rem;
+}
+
+.header2 ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.header2 ul li a:hover {
+    color: grey;
+    text-decoration: underline;
+}
+
+#contact-us {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+#contact-us:hover {
+    background-color: #39393a;
+}
+
+#home {
+    height: 70vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/image2.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero-section-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1; /* Ensure content appears above background */
+}
+
+#home h1 {
+    color: white;
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Added text shadow for brightness */
+}
+
+.hero-section-message button {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    background-color: #ff9e2d;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-section-message button:hover {
+    background-color: #e87a1f;
+}
+
+
+#about-us {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+.image-section img {
+    max-width: 40rem;
+    border-radius: 1rem;
+}
+.text-section {
+    max-width: 60rem;
+    margin-left: 4.4rem;
+}
+.text-section h4 {
+    color: #ff9e2d;
+    letter-spacing: 0.1rem;
+}
+#about-company-info{
+    display: flex;
+    font-weight: 1000;
+    font-size: 3.3rem;
+    
+    
+    
+}
+.services {
+    margin-top: 2rem;
+}
+.service {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 2rem;
+}
+.service .icon img {
+    height: 3rem;
+    width: 3rem;
+}
+.flex-skills {
+    font-size: 1.6rem;
+    margin: 1rem auto;
+    max-width: 90rem;
+    padding: 3rem;
+    background: white;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
+}
+h1 {
+    color: #333;
+    text-align: center;
+}
+.boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.box {
+    background: #f8fafa;
+    padding: 2rem;
+    width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
+}
+.box h2 {
+    color: black;
+    margin-bottom: 10px;
+}
+#services-sec {
+    text-align: center;
+    padding: 20px;
+}
+.category {
+    margin: 20px 0;
+}
+.category h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.types-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.box {
+    width: 250px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.box img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+.box h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.box p {
+    font-size: 14px;
+    color: #666;
+}
+#faq h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.faq-container {
+    max-width: 60rem;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq-item {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: #fff;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.faq-answer {
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    display: none;
+    background: #fff;
+    color: #333;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .faq-question {
+    background: #0056b3;
+}
+#contact-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.container-contact {
+    max-width: 80%;
+    margin: 3rem auto; /* Adds margin on left and right */
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 4rem;
+    border-radius: 1rem;
+    /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); */
+}
+
+/* Left Form Section */
+.form-container {
+    flex: 1;
+    padding-right: 3rem;
+    border-right: 1px solid #ccc;
+}
+
+.form-container h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-container input, .form-container textarea {
+    width: 100%;
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1.8rem;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 1.4rem;
+    background: #ff9800;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+/* Right Contact Info Section */
+.contact-info {
+    margin-top: 9rem;
+    flex: 1;
+    padding-left: 3rem;
+    text-align: left;
+}
+
+.contact-info h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+    font-size: 1.8rem;
+    margin: 1.2rem 0;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 1.8rem;
+}
+
+.social-icons {
+    margin-top: 1.5rem;
+}
+
+.social-icons a {
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: #007BFF;
+}
+.footer {
+    background: #222;
+    color: white;
+    padding: 3rem 0;
+    font-size: 1.6rem;
+}
+
+.footer-container {
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Left: About */
+.footer-about,
+.footer-services,
+.footer-social {
+    flex: 1;
+}
+
+.footer-about p, .footer-about a {
+    margin: 0.5rem 0;
+    color: #bbb;
+    text-decoration: none;
+}
+
+.footer-about a:hover {
+    color: #ff9800;
+}
+
+/* Middle: Services */
+.footer-services h2 {
+    margin-bottom: 1rem;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-columns div {
+    flex: 1;
+}
+
+.footer-columns ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-columns li {
+    margin-bottom: 0.5rem;
+    color: #bbb;
+}
+
+/* Right: Social Links */
+.footer-social a {
+    display: block;
+    margin-top: 1rem;
+    color: #ff9800;
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    color: white;
+}
+
+/* Bottom Footer */
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #444;
+    font-size: 1.4rem;
+    color: #bbb;
+}
