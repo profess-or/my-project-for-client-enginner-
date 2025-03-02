@@ -114,13 +114,53 @@ img {
     background-color: #39393a;
 } */
 
-#home {
+/* #home {
     height: 70vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/image2.jpg');
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
     position: relative;
+} */
+/* Add these styles to style.css */
+#home {
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-container {
+    position: relative;
+    height: 100%;
+}
+
+.slides {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slider-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.hero-section-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2; /* Ensure it's above the slider */
 }
 
 .hero-section-message {
@@ -302,10 +342,11 @@ h1 {
     display: none;
     background: #fff;
     color: #333;
+    display: none !important;
 }
 
 .faq-item.active .faq-answer {
-    display: block;
+    display: block !important;
 }
 
 .faq-item.active .faq-question {

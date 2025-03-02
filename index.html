@@ -46,6 +46,24 @@
       </div>
     </div>
     <div id="home">
+        <!-- Add this inside the #home div (replace the existing background image) -->
+<div class="slider-container">
+    <div class="slides">
+        <div class="slide"><img src="images/modularkitchen.jpg" alt="Slide 3" class="slider-img"></div>
+        <div class="slide"><img src="images/toughened.jpg" alt="Slide 7" class="slider-img"></div>
+        <div class="slide"><img src="images/marble.jpg" alt="Slide 2" class="slider-img"></div>
+       
+        <div class="slide"><img src="images/polycarbonate.webp" alt="Slide 4" class="slider-img"></div>
+        <div class="slide"><img src="images/types_of_lighting.webp" alt="Slide 5" class="slider-img"></div>
+        <div class="slide"><img src="images/image1.jpg" alt="Slide 1" class="slider-img"></div>
+        <div class="slide"><img src="images/uPVC.jpg" alt="Slide 6" class="slider-img"></div>
+       
+    </div>
+    <div class="hero-section-message">
+        <h1>Building Excellence, Crafting Dreams – From Roof to Floor & More!</h1><br><br>
+        <a href="#services-sec"><button>View Services</button></a>
+    </div>
+</div>
         <div class="hero-section-message">
             <h1>Building Excellence, Crafting Dreams – From Roof to Floor & More!</h1><br><br>
             <a href="#services-sec"><button>View Services</button></a>
@@ -202,13 +220,13 @@
 
         <div class="faq-container">
             <div class="faq-item">
-                <div class="faq-question">1. What is the average cost of roofing services? <span>+</span></div>
-                <div class="faq-answer">The cost depends on the material used.</div>
+                <div class="faq-question">1. Where are you located ? <span>+</span></div>
+                <div class="faq-answer">Madyapur thimi-1, Bhaktapur, Nepal</div>
             </div>
     
             <div class="faq-item">
-                <div class="faq-question">2. What are the pricing options for flooring services? <span>+</span></div>
-                <div class="faq-answer">Flooring costs vary.</div>
+                <div class="faq-question">2. How can we contact you ? <span>+</span></div>
+                <div class="faq-answer">Num : +977-9843496570 , Email : thealphaengineeringsolutions@gmail.com</div>
             </div>
     
             <div class="faq-item">
@@ -222,8 +240,8 @@
             </div>
     
             <div class="faq-item">
-                <div class="faq-question">5. Do you provide warranty and after-service support? <span>+</span></div>
-                <div class="faq-answer">Yes! We offer a warranty of up to 5 years on roofing and flooring, and 2 years on interiors. After-service support is available for all projects.</div>
+                <div class="faq-question">5. What are your main services ?<span>+</span></div>
+                <div class="faq-answer">Roofing , Interiors , Flooring Painting & Lighting </div>
             </div>
         </div>
         
@@ -320,15 +338,27 @@
     </footer>
     
     <script>
-        // FAQ Accordion Functionality
-        document.querySelectorAll('.faq-question').forEach(item => {
-            item.addEventListener('click', () => {
-                let parent = item.parentElement;
-                parent.classList.toggle('active');
-                let symbol = parent.classList.contains('active') ? "-" : "+";
-                item.querySelector("span").textContent = symbol;
-            });
+       
+        let index = 0;
+    function slideImages() {
+        const slides = document.querySelector(".slides");
+        index++;
+        if (index >= 7) index = 0;
+        slides.style.transform = `translateX(${-index * 100}%)`;
+    }
+    setInterval(slideImages, 3000);
+
+    // Keep existing FAQ functionality
+    document.querySelectorAll('.faq-question').forEach(item => {
+        item.addEventListener('click', () => {
+            let parent = item.parentElement;
+            parent.classList.toggle('active');
+            let symbol = parent.classList.contains('active') ? "-" : "+";
+            item.querySelector("span").textContent = symbol;
         });
+    });
+
+        
     </script>
   </body>
 </html>
