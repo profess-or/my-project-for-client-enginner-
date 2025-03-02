@@ -49,14 +49,13 @@
         <!-- Add this inside the #home div (replace the existing background image) -->
 <div class="slider-container">
     <div class="slides">
-        <div class="slide"><img src="images/modularkitchen.jpg" alt="Slide 3" class="slider-img"></div>
-        <div class="slide"><img src="images/toughened.jpg" alt="Slide 7" class="slider-img"></div>
-        <div class="slide"><img src="images/marble.jpg" alt="Slide 2" class="slider-img"></div>
-       
-        <div class="slide"><img src="images/polycarbonate.webp" alt="Slide 4" class="slider-img"></div>
-        <div class="slide"><img src="images/types_of_lighting.webp" alt="Slide 5" class="slider-img"></div>
-        <div class="slide"><img src="images/image1.jpg" alt="Slide 1" class="slider-img"></div>
-        <div class="slide"><img src="images/uPVC.jpg" alt="Slide 6" class="slider-img"></div>
+        <div class="slide"><img src="images/modularkitchen.jpg" alt="Slide 1" class="slider-img"></div>
+        <div class="slide"><img src="images/types_of_lighting.webp" alt="Slide 2" class="slider-img"></div>
+        <div class="slide"><img src="images/toughened.jpg" alt="Slide 3" class="slider-img"></div>
+        <div class="slide"><img src="images/marble.jpg" alt="Slide 4" class="slider-img"></div>
+        <div class="slide"><img src="images/polycarbonate.webp" alt="Slide 5" class="slider-img"></div>
+        <div class="slide"><img src="images/image1.jpg" alt="Slide 6" class="slider-img"></div>
+        <div class="slide"><img src="images/uPVC.jpg" alt="Slide 7" class="slider-img"></div>
        
     </div>
     <div class="hero-section-message">
@@ -249,15 +248,14 @@
     <div id="contact-details">
         <h1 style="font-size: 4rem;">Contact Us</h1>
         <div class="container-contact">
-            <!-- Left: Query Form -->
             <div class="form-container">
                 <h2>Send Us a Message</h2>
-                <form action="send_email.php" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <input type="text" name="phone" placeholder="Your Contact Number" required>
-                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                    <button type="submit">Submit</button>
+                <form id="contactForm">
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
+                    <input type="email" name="email" id="email" placeholder="Your Email" required>
+                    <input type="text" name="phone" id="phone" placeholder="Your Contact Number" required>
+                    <textarea name="message" id="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="button" onclick="sendEmail()">Submit</button>
                 </form>
             </div>
     
@@ -357,7 +355,23 @@
             item.querySelector("span").textContent = symbol;
         });
     });
+    function sendEmail() {
+        // Get form data
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const message = document.getElementById('message').value;
 
+        // Construct the email subject and body
+        const subject = "New Contact Form Submission";
+        const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0APhone: ${phone}%0D%0AMessage: ${message}`;
+
+        // Construct the mailto link
+        const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=thealphaengineeringsolutions@gmail.com&su=${encodeURIComponent(subject)}&body=${body}`;
+
+        // Open Gmail in a new tab
+        window.open(mailtoLink, '_blank');
+    }
         
     </script>
   </body>
